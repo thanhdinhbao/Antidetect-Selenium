@@ -63,6 +63,8 @@
             this.Start = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbExtension = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numDrivers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDrivers)).BeginInit();
             this.SuspendLayout();
@@ -159,7 +161,8 @@
             "1366x768",
             "1440x900",
             "2560x1440",
-            "1280x720"});
+            "1280x720",
+            "Random"});
             this.cbScreenRes.Location = new System.Drawing.Point(170, 80);
             this.cbScreenRes.Name = "cbScreenRes";
             this.cbScreenRes.Size = new System.Drawing.Size(437, 21);
@@ -336,7 +339,7 @@
             // 
             this.chkRandomParams.Location = new System.Drawing.Point(20, 350);
             this.chkRandomParams.Name = "chkRandomParams";
-            this.chkRandomParams.Size = new System.Drawing.Size(300, 24);
+            this.chkRandomParams.Size = new System.Drawing.Size(150, 24);
             this.chkRandomParams.TabIndex = 23;
             this.chkRandomParams.Text = "Random các thông số";
             // 
@@ -445,9 +448,29 @@
             this.Delete.HeaderText = "Xóa";
             this.Delete.Name = "Delete";
             // 
+            // cbExtension
+            // 
+            this.cbExtension.Location = new System.Drawing.Point(170, 350);
+            this.cbExtension.Name = "cbExtension";
+            this.cbExtension.Size = new System.Drawing.Size(81, 24);
+            this.cbExtension.TabIndex = 31;
+            this.cbExtension.Text = "Extension";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(64, 409);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FMain
             // 
             this.ClientSize = new System.Drawing.Size(660, 650);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cbExtension);
             this.Controls.Add(this.dataGridViewDrivers);
             this.Controls.Add(this.lblDriverInfo);
             this.Controls.Add(this.cbDriverInfo);
@@ -524,5 +547,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Start;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stop;
         private System.Windows.Forms.DataGridViewTextBoxColumn Delete;
+        private System.Windows.Forms.CheckBox cbExtension;
+        private System.Windows.Forms.Button button1;
     }
 }
